@@ -1,0 +1,11 @@
+# Program to compute quotient and remainder of two integers
+
+dividend = int(input("Enter the dividend (an integer): "))
+divisor = int(input("Enter the divisor (an integer): "))
+if divisor == 0:
+    print("Error: Division by zero is not allowed.")
+else:
+     quotient = dividend // divisor
+    remainder = dividend % divisor
+    print("Quotient:", quotient)
+    print("Remainder:", remainder)
