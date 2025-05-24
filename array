@@ -1,0 +1,42 @@
+# Program to take N elements and display the largest element
+
+N = int(input("Enter number of elements: "))
+arr = [float(input(f"Enter element {i+1}: ")) for i in range(N)]
+largest = max(arr)
+print(f"Largest element is: {largest}")
+
+
+#Program to multiply two matrices
+
+r1, c1 = map(int, input("Enter rows and columns of first matrix: ").split())
+r2, c2 = map(int, input("Enter rows and columns of second matrix: ").split())
+
+if c1 != r2:
+    print("Matrix multiplication not possible")
+else:
+    print("Enter first matrix:")
+    matrix1 = [list(map(float, input().split())) for _ in range(r1)]
+    print("Enter second matrix:")
+    matrix2 = [list(map(float, input().split())) for _ in range(r2)]
+
+    result = [[0] * c2 for _ in range(r1)]
+    for i in range(r1):
+        for j in range(c2):
+            for k in range(c1):
+                result[i][j] += matrix1[i][k] * matrix2[k][j]
+
+    print("Product of matrices:")
+    for row in result:
+        print(*row)
+
+
+#Program to compute transpose of a matrix
+
+r, c = map(int, input("Enter rows and columns of matrix: ").split())
+matrix = [list(map(float, input().split())) for _ in range(r)]
+
+transpose = [[matrix[j][i] for j in range(r)] for i in range(c)]
+
+print("Transpose of the matrix:")
+for row in transpose:
+    print(*row)
