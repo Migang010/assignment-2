@@ -1,0 +1,13 @@
+# Program to find the frequency of a given character in a string
+
+input_string = input("Enter a string: ")
+char = input("Enter the character to find frequency of: ")
+frequency = input_string.count(char)
+print(f"The character '{char}' appears {frequency} times in the string.")
+
+
+# to find the length of a string
+
+user_string = input("Enter a string: ")
+length = len(user_string)
+print("Length of the entered string is:", length)
