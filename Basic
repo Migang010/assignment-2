@@ -1,6 +1,48 @@
-# Program to multiply two decimal numbers entered by the use
+# Program to multiply two decimal numbers entered by the user
 
 num1 = float(input("Enter the first decimal number: "))
 num2 = float(input("Enter the second decimal number: "))
 product = num1 * num2
 print("The product of", num1, "and", num2, "is:", product)
+
+#Program to Print Integer Number Entered by User
+num = int(input("Enter an integer: "))
+print("The number is:", num)
+
+#Program to Add Two Integer Numbers Entered by User
+num1 = int(input("Enter first integer: "))
+num2 = int(input("Enter second integer: "))
+sum = num1 + num2
+print("Sum:", sum)
+
+#program where the user is asked to enter two integers (divisor and dividend) and the quotient and the remainder of their division is computed.
+dividend = int(input("Enter dividend: "))
+divisor = int(input("Enter divisor: "))
+quotient = dividend // divisor
+remainder = dividend % divisor
+print(f"Quotient: {quotient}")
+print(f"Remainder: {remainder}")
+
+#Program to Find Size of int, float, double and char in your computer
+import sys
+integer = 1
+float_num = 1.0
+char = 'a'
+print(f"Size of int: {sys.getsizeof(integer)} bytes")
+print(f"Size of float: {sys.getsizeof(float_num)} bytes")
+print(f"Size of char: {sys.getsizeof(char)} bytes")
+
+#Program to Swap Two Numbers
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+a, b = b, a  # Pythonic swap
+print(f"After swapping: a = {a}, b = {b}")
+
+#Program to Find ASCII Value of a Character
+char = input("Enter a character: ")
+ascii_value = ord(char)
+print(f"ASCII value of {char} is {ascii_value}")
+char = input("Enter a character: ")
+ascii_value = ord(char)
+print(f"ASCII value of {char} is {ascii_value}")
+
