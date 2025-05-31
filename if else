@@ -1,5 +1,4 @@
 # Program to compute quotient and remainder of two integers
-
 dividend = int(input("Enter the dividend (an integer): "))
 divisor = int(input("Enter the divisor (an integer): "))
 if divisor == 0:
@@ -10,17 +9,58 @@ else:
     print("Quotient:", quotient)
     print("Remainder:", remainder)
 
-# Program to find the largest number among three numbers
 
+# Program to find the largest number among three numbers
 num1 = float(input("Enter the first number: "))
 num2 = float(input("Enter the second number: "))
 num3 = float(input("Enter the third number: "))
-
 if num1 >= num2 and num1 >= num3:
     largest = num1
 elif num2 >= num1 and num2 >= num3:
     largest = num2
 else:
     largest = num3
-
 print("The largest number is:", largest)
+
+#Program to Check Whether Number is Even or Odd
+num = int(input("Enter a number: "))
+if num % 2 == 0:
+    print(f"{num} is Even")
+else:
+    print(f"{num} is Odd")
+
+#Program to Check Whether a Character is Vowel or Consonant
+char = input("Enter a character: ").lower()
+if char in 'aeiou':
+    print(f"{char} is a Vowel")
+elif char.isalpha():
+    print(f"{char} is a Consonant")
+else:
+    print("Not a valid character")
+
+
+#Program which accepts coefficients of a quadratic equation from the user and displays the roots (both real and complex roots depending upon the discriminant)
+import math
+a = float(input("Enter coefficient a: "))
+b = float(input("Enter coefficient b: "))
+c = float(input("Enter coefficient c: "))
+discriminant = b**2 - 4*a*c
+if discriminant > 0:
+    root1 = (-b + math.sqrt(discriminant)) / (2*a)
+    root2 = (-b - math.sqrt(discriminant)) / (2*a)
+    print(f"Roots are real and different: {root1}, {root2}")
+elif discriminant == 0:
+    root = -b / (2*a)
+    print(f"Roots are real and same: {root}")
+else:
+    real_part = -b / (2*a)
+    imag_part = math.sqrt(-discriminant) / (2*a)
+    print(f"Roots are complex: {real_part} + {imag_part}i, {real_part} - {imag_part}i")
+
+#Program to Check whether a year entered by user is Leap Year or not
+year = int(input("Enter a year: "))
+if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
+    print(f"{year} is a Leap Year")
+else:
+    print(f"{year} is not a Leap Year")
+
