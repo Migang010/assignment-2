@@ -1,5 +1,4 @@
 # Program to find the factorial of a given number
-
 n = int(input("Enter a non-negative integer: "))
 if n < 0:
     print("Factorial is not defined for negative numbers.")
@@ -11,7 +10,6 @@ else:
 
 
 # Program to display Fibonacci series up to a certain number n
-
 n = int(input("Enter a positive number: "))
 a, b = 0, 1
 print("Fibonacci series up to", n, "is:")
@@ -21,7 +19,6 @@ while a <= n:
 
 
 # Program to find LCM of two numbers
-
 def gcd(x, y):
     while y:
         x, y = y, x % y
@@ -30,8 +27,119 @@ def gcd(x, y):
 # Function to compute LCM using GCD
 def lcm(x, y):
     return (x * y) // gcd(x, y)
-
 num1 = int(input("Enter the first number: "))
 num2 = int(input("Enter the second number: "))
-
 print("The LCM of", num1, "and", num2, "is:", lcm(num1, num2))
+
+#Program to Calculate Sum of first N Natural Numbers
+n = int(input("Enter a number N: "))
+sum_n = sum(range(1, n+1))
+print(f"Sum of first {n} natural numbers: {sum_n}")
+
+#Program to Generate Multiplication Table of a number using a for loop
+num = int(input("Enter a number: "))
+print(f"Multiplication Table of {num}:")
+for i in range(1, 11):
+    print(f"{num} x {i} = {num * i}")
+
+#Program to Display Fibonacci Series up to nth term
+n = int(input("Enter the number of terms: "))
+a, b = 0, 1
+print("Fibonacci Series:", end=" ")
+for i in range(n):
+    print(a, end=", ")
+    a, b = b, a + b
+print()
+
+
+#Program to Find GCD or HCF of two numbers entered by user
+def gcd(a, b):
+    while b:
+        a, b = b, a % b
+    return a
+num1 = int(input("Enter first number: "))
+num2 = int(input("Enter second number: "))
+print(f"GCD of {num1} and {num2} is: {gcd(num1, num2)}")
+
+
+#Program to Reverse a given Number N by user
+num = int(input("Enter a number: "))
+reversed_num = int(str(num)[::-1])
+print(f"Reversed number: {reversed_num}")
+
+
+#Program to display sum of all digits of a given Number N by user
+num = int(input("Enter a number: "))
+sum_digits = sum(int(digit) for digit in str(abs(num)))
+print(f"Sum of digits: {sum_digits}")
+
+#Program to Calculate Power of a Number using inbuilt pow() function
+base = float(input("Enter base: "))
+exponent = int(input("Enter exponent: "))
+result = pow(base, exponent)
+print(f"{base} raised to power {exponent} is: {result}")
+
+
+#Program to Calculate Power of a Number without using inbuilt pow() function
+num = int(input("Enter a number: "))
+if str(num) == str(num)[::-1]:
+    print(f"{num} is a Palindrome")
+else:
+    print(f"{num} is not a Palindrome")
+
+
+#Program to Check Whether a Number N entered by user is Palindrome or Not
+num = int(input("Enter a number: "))
+if str(num) == str(num)[::-1]:
+    print(f"{num} is a Palindrome")
+else:
+    print(f"{num} is not a Palindrome")
+
+
+#Program to Check Whether a Number is Prime or Not
+num = int(input("Enter a number: "))
+if num < 2:
+    print(f"{num} is not a Prime number")
+else:
+    is_prime = True
+    for i in range(2, int(num**0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+    print(f"{num} is {'Prime' if is_prime else 'not Prime'}")
+
+
+#Program to Display Prime Numbers Between Two Intervals
+start = int(input("Enter start of interval: "))
+end = int(input("Enter end of interval: "))
+print(f"Prime numbers between {start} and {end} are:")
+for num in range(start, end + 1):
+    if num > 1:
+        is_prime = True
+        for i in range(2, int(num**0.5) + 1):
+            if num % i == 0:
+                is_prime = False
+                break
+        if is_prime:
+            print(num, end=" ")
+print()
+
+
+#Program to check whether a number entered by the user is an Armstrong number or not
+num = int(input("Enter a number: "))
+num_str = str(num)
+n = len(num_str)
+sum_powers = sum(int(digit) ** n for digit in num_str)
+if sum_powers == num:
+    print(f"{num} is an Armstrong number")
+else:
+    print(f"{num} is not an Armstrong number")
+
+
+#Program to Display all Factors of a Number entered by User
+num = int(input("Enter a number: "))
+print(f"Factors of {num} are:")
+for i in range(1, num + 1):
+    if num % i == 0:
+        print(i, end=" ")
+print()
